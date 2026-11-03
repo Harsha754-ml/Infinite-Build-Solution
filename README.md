@@ -1,0 +1,146 @@
+\# Infinite Building Solutions Website
+
+
+
+Marketing website for \*\*Infinite Building Solutions\*\*, a construction, architecture and interiors firm based in Mysuru, Karnataka. The site showcases the firm's completed and ongoing work, its background, and how to get in touch.
+
+
+
+It is a static site (HTML, CSS and JavaScript only). There is no build step and no dependencies.
+
+
+
+\## Pages
+
+
+
+\- \*\*Home\*\*: hero, services, a sneak peek of selected projects, overseas experience and a call to action
+
+\- \*\*Our work\*\*: project gallery
+
+\- \*\*About\*\*: the firm's story, team and approach
+
+\- \*\*Contact\*\*: enquiry form, phone, WhatsApp, email and office address
+
+
+
+All four pages live in `index.html` and switch using the URL hash (`#home`, `#work`, `#about`, `#contact`).
+
+
+
+\## Project structure
+
+
+
+```
+
+index.html        page markup
+
+css/style.css     all styling and brand colours
+
+js/script.js      project data, page switching and contact form
+
+images/           logo and project photos
+
+```
+
+
+
+\## Run locally
+
+
+
+Open `index.html` in any browser. Keep the folder structure as it is so the images load.
+
+
+
+\## Editing content
+
+
+
+\*\*Add or change a project\*\*
+
+Each project is one entry in the `P` list at the top of `js/script.js`. Add the photo to `images/`, then set the entry's `i` field to its path, for example `images/my-project.jpg`. Only projects that have a photo are shown on the Our work page.
+
+
+
+\*\*Change hero images\*\*
+
+The hero image for each page is set at the bottom of `css/style.css` (classes `.i1` to `.i5`). Replace the files in `images/` or update the paths.
+
+
+
+\*\*Change colours\*\*
+
+Brand colours are defined at the top of `css/style.css`:
+
+
+
+| Variable | Use |
+
+| --- | --- |
+
+| `--or` | Logo orange, used for accents and buttons |
+
+| `--ink` | Logo charcoal |
+
+| `--pe` | Deep petrol teal, the complementary colour for dark sections |
+
+
+
+\*\*Contact details\*\*
+
+Update the phone number, email and address in `index.html` (Contact section and footer) and the email address in `js/script.js`.
+
+
+
+\## Contact form
+
+
+
+The form currently opens the visitor's email app with the enquiry filled in (`mailto:`). To receive enquiries directly in an inbox, connect a form service such as Formspree or add a small backend.
+
+
+
+\## Deployment
+
+
+
+Because the site is static, it can be hosted anywhere. For a free preview on GitHub Pages:
+
+
+
+1\. Go to \*\*Settings → Pages\*\* in this repository.
+
+2\. Under \*\*Build and deployment\*\*, choose \*\*Deploy from a branch\*\*.
+
+3\. Select the `main` branch and the `/ (root)` folder, then save.
+
+
+
+The site will be live at `https://<username>.github.io/<repository-name>/`.
+
+
+
+\## To do
+
+
+
+\- Replace the web-sized images with original, high-resolution project photos
+
+\- Add a showreel from the firm's project videos
+
+\- Add photos for the remaining projects
+
+\- Add client testimonials
+
+\- Connect the contact form to an inbox
+
+
+
+\## Credits
+
+
+
+Design and development by Arati. Project details and photographs are provided by Infinite Building Solutions.
+
