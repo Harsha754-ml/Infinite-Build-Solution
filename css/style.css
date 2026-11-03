@@ -1,7 +1,5 @@
 :root{--or:#f26e36;--ink:#373535;--pe:#1f3d47;--bg:#fff;--fg:#2b2a2a;--mut:#6a6b6d;--st:#eef1f0;--ln:#dfe3e2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14201f;--fg:#ecefee;--mut:#a3adab;--st:#1b2b2c;--ln:#2d4141;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#14201f;--fg:#ecefee;--mut:#a3adab;--st:#1b2b2c;--ln:#2d4141;color-scheme:dark}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.65 "Public Sans",system-ui,sans-serif}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
@@ -79,3 +77,28 @@ footer a{display:block;text-decoration:none;padding:2px 0}
 .bn.i3{background-image:url(../images/hero-about.jpg);background-position:center;background-size:cover}
 .bn.i4{background-image:url(../images/hero-contact.jpg);background-position:center;background-size:cover}
 .bn.i5{background-image:url(../images/oman.jpg);background-position:center;background-size:cover}
+/* ---- v2: bolder palette, motion, theme picker ---- */
+:root{--bg:#fff8f1;--fg:#241a15;--mut:#6f625a;--st:#ffe7d1;--ln:#efd7c2;--pe:#2b2625;--yl:#ffc83d;color-scheme:light}
+html[data-pal=teal]{--bg:#f3fbfa;--fg:#0f2a2d;--mut:#4d6b6e;--st:#d9f2ee;--ln:#bfe3dd;--pe:#0d4a4f}
+html[data-pal=night]{--bg:#15110f;--fg:#f4ece6;--mut:#b5a69c;--st:#221b18;--ln:#3a2f2a;--pe:#0a0706;color-scheme:dark}
+body{overflow-x:clip}
+.bn::before{background:linear-gradient(100deg,#150f0dcc 0%,#150f0d66 52%,#150f0d1a 100%)}
+.bn h1{font-size:clamp(2.8rem,8vw,6.6rem);max-width:13ch}
+mark{background:linear-gradient(transparent 60%,var(--yl) 60%);color:inherit;padding:0 .08em}
+.btn{transition:transform .25s,filter .25s}.btn:hover{transform:translateY(-3px) rotate(-1deg)}
+.bdg{position:absolute;right:7%;bottom:26%;width:150px;height:150px;z-index:2}
+.bdg .rot{transform-origin:100px 100px;animation:sp 20s linear infinite}.bdg text{font:700 15.5px "Bricolage Grotesque",sans-serif;fill:#1d1210;letter-spacing:1.5px}
+.bdg circle{fill:var(--yl)}.bdg .c{font:700 54px "Bricolage Grotesque",sans-serif;text-anchor:middle;letter-spacing:0}
+@keyframes sp{to{transform:rotate(360deg)}}
+.mq{background:var(--or);color:#1d1210;overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-1.4deg);margin:40px -20px 46px;border-block:3px solid #1d1210;position:relative;z-index:3}
+.mq div{display:inline-block;animation:mq 30s linear infinite;font:700 1.5rem "Bricolage Grotesque",sans-serif;letter-spacing:.05em;text-transform:uppercase}
+@keyframes mq{to{transform:translateX(-50%)}}
+.svc div{transition:background .3s,padding .3s,color .3s}.svc div:hover{background:var(--or);color:#1d1210;padding-left:22px}.svc div:hover p{color:#1d1210}
+.card{transition:transform .35s,border-radius .35s}.card:hover{transform:translateY(-8px);border-radius:56px 6px 56px 6px}
+.band{position:relative;overflow:hidden}.band::after{content:"";position:absolute;right:-70px;top:-90px;width:320px;height:320px;border:48px solid #ffffff45;border-radius:50%}.band .w{position:relative;z-index:1}
+.stats b{color:var(--or)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.tp{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;gap:8px;align-items:center;background:var(--bg);color:var(--fg);border:1px solid var(--ln);padding:8px 12px;border-radius:99px;box-shadow:0 8px 28px #0003;font-size:.78rem;font-weight:600}
+.tp button{width:26px;height:26px;border-radius:50%;border:2px solid var(--bg);cursor:pointer;box-shadow:0 0 0 1px var(--ln)}.tp button[aria-pressed=true]{box-shadow:0 0 0 2px var(--fg)}
+@media(max-width:860px){.bdg{width:100px;height:100px;right:5%;bottom:30%}.mq div{font-size:1.15rem}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.mq div,.bdg .rot{animation:none}}

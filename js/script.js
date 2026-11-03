@@ -31,3 +31,12 @@ addEventListener("hashchange",route);route();
 document.getElementById("f").onsubmit=function(e){e.preventDefault();var f=e.target;
 location.href="mailto:ceo@infinitebs.in?subject="+encodeURIComponent("Website enquiry: "+f.t.value)+"&body="+encodeURIComponent("Name: "+f.n.value+"\nPhone: "+f.p.value+"\n\n"+f.m.value);
 document.getElementById("note").textContent="Your email app should open with the enquiry filled in."};
+(function(){var R=matchMedia("(prefers-reduced-motion:reduce)").matches,H=document.documentElement,bs=document.querySelectorAll(".tp button");
+function setP(p){H.dataset.pal=p;[].forEach.call(bs,function(b){b.setAttribute("aria-pressed",b.dataset.p==p)});try{localStorage.setItem("pal",p)}catch(e){}}
+var s="sun";try{s=localStorage.getItem("pal")||"sun"}catch(e){}setP(s);
+[].forEach.call(bs,function(b){b.onclick=function(){setP(b.dataset.p)}});
+function count(el){var m=/^(\d+)(.*)$/.exec(el.textContent);if(!m||R)return;var n=+m[1],t=0,r=m[2];(function f(){t+=.035;var v=Math.min(1,t);el.textContent=Math.round(n*(1-Math.pow(1-v,3)))+r;if(v<1)requestAnimationFrame(f)})()}
+if(!("IntersectionObserver" in window)||R)return;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");var b=e.target.querySelector("b");if(b&&!b.dataset.d){b.dataset.d=1;count(b)}io.unobserve(e.target)}})},{threshold:.15});
+[].forEach.call(document.querySelectorAll(".sec h2,.card,.svc div,.facts div,.stats div,.band h2,.bn.mid .w"),function(e){e.classList.add("rv");io.observe(e)});
+})();
