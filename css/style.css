@@ -102,3 +102,21 @@ mark{background:linear-gradient(transparent 60%,var(--yl) 60%);color:inherit;pad
 .tp button{width:26px;height:26px;border-radius:50%;border:2px solid var(--bg);cursor:pointer;box-shadow:0 0 0 1px var(--ln)}.tp button[aria-pressed=true]{box-shadow:0 0 0 2px var(--fg)}
 @media(max-width:860px){.bdg{width:100px;height:100px;right:5%;bottom:30%}.mq div{font-size:1.15rem}}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.mq div,.bdg .rot{animation:none}}
+/* ---- v3: golden-hour palette, premium + bold, logo tab ---- */
+:root{--bg:#fbf6ee;--fg:#1a130c;--mut:#6b5d4f;--st:#f3e8d6;--ln:#e6d6bd;--pe:#1b130b;--dk:#14100a;--br:#3a1f0a;--am:#f9a51a;--yl:#fdd04e;color-scheme:light}
+body::before{background:var(--dk)}
+header{background:var(--dk);border-bottom:1px solid #ffffff1f}
+.nav img{height:96px;margin:-12px 0 -56px;padding:14px 22px;border-radius:0 0 28px 28px;background:#fff;box-shadow:0 14px 32px #0007,0 4px 0 var(--or)}
+nav a{color:#f3ece2}nav a:hover{background:#ffffff1c}nav a.on{background:var(--or);color:#14100a}
+.btn{background:linear-gradient(90deg,var(--or),var(--am));color:#14100a}
+.bn::before{background:linear-gradient(#ffffff10 1px,transparent 1px) 0 0/72px 72px,linear-gradient(90deg,#ffffff10 1px,transparent 1px) 0 0/72px 72px,linear-gradient(100deg,#14100aeb 0%,#14100a99 50%,#3a1f0a33 100%)}
+.bn::after{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 100% 100%,#f9a51a66,transparent 65%);mix-blend-mode:screen}
+.bn .w{z-index:1}
+.stats{background:var(--dk);color:#cfc4b6}.stats div{border-color:#ffffff22}.stats b{color:var(--am)}
+.dark{background:linear-gradient(180deg,var(--dk),var(--br))}
+.sec h2::before{content:"";display:block;width:56px;height:5px;background:linear-gradient(90deg,var(--or),var(--am));margin-bottom:18px}
+.facts b{color:var(--or)}
+.card{background:var(--dk)}.card .b{background:linear-gradient(transparent,#14100af2)}.tile{background-color:var(--br)}
+.band{background:linear-gradient(100deg,var(--or),var(--am))}
+footer{background:var(--dk);border-top:4px solid var(--or)}footer img{height:64px}
+@media(max-width:860px){.nav img{height:76px;padding:10px 16px;margin:-12px 0 -38px}}
