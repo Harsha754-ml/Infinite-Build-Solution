@@ -186,3 +186,7 @@ footer .w{padding-left:28px;padding-right:28px;gap:32px}
 
 /* ---- v10: Mission and Manpower cards stacked ---- */
 .cards{grid-template-columns:1fr}
+
+/* ---- v11: slower card shape change and image zoom ---- */
+.card.rv{transition:opacity .7s,transform .9s ease,border-radius 1.2s ease}
+.card img{transition:transform 1.4s ease}
