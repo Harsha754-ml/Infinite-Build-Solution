@@ -183,3 +183,6 @@ footer .w{padding-left:28px;padding-right:28px;gap:32px}
 .pc .mut{color:#b8c8c9}
 #abroad{scroll-margin-top:100px}
 @media(max-width:860px){.pc{border-radius:36px;padding:38px 28px}.cards{gap:20px}}
+
+/* ---- v10: Mission and Manpower cards stacked ---- */
+.cards{grid-template-columns:1fr}
