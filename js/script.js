@@ -40,3 +40,7 @@ if(!("IntersectionObserver" in window)||R)return;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");var b=e.target.querySelector("b");if(b&&!b.dataset.d){b.dataset.d=1;count(b)}io.unobserve(e.target)}})},{threshold:.15});
 [].forEach.call(document.querySelectorAll(".sec h2,.card,.svc div,.facts div,.stats div,.band h2,.bn.mid .w"),function(e){e.classList.add("rv");io.observe(e)});
 })();
+(function(){var b=document.querySelector(".mb"),n=document.querySelector("header nav");if(!b)return;
+function c(){n.classList.remove("open");b.setAttribute("aria-expanded","false")}
+b.onclick=function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)};
+n.addEventListener("click",function(e){if(e.target.tagName=="A")c()});addEventListener("hashchange",c)})();

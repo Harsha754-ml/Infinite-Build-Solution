@@ -144,3 +144,15 @@ h1,h2,h3{letter-spacing:0}h2{font-weight:800}
 .gal{columns:3 260px;column-gap:16px;margin-top:36px}.gal img{width:100%;display:block;margin:0 0 16px;border-radius:6px 6px 6px 36px;break-inside:avoid}
 @media(max-width:860px){.peek .card,.peek .a{min-height:320px}.peek .a h3{font-size:1.45rem}.bn.mid{min-height:0}.bn.mid .w{padding-top:64px;padding-bottom:40px}.g2{margin-top:56px}}
 @media(max-width:600px){.gal{columns:2 140px;column-gap:10px}.gal img{margin-bottom:10px;border-radius:4px 4px 4px 22px}.grid{grid-template-columns:1fr}}
+/* ---- v7: mobile hamburger menu ---- */
+.mb{display:none}
+@media(max-width:860px){
+.mb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:48px;height:48px;border:0;border-radius:50%;background:var(--st);cursor:pointer}
+.mb span{width:22px;height:2.5px;background:var(--fg);border-radius:2px;transition:transform .25s,opacity .25s}
+.mb[aria-expanded=true] span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+.mb[aria-expanded=true] span:nth-child(2){opacity:0}
+.mb[aria-expanded=true] span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+header nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;background:#fff;padding:12px 24px 20px;border-bottom:3px solid var(--or);box-shadow:0 18px 30px #0002}
+header nav.open{display:flex}
+header nav a{padding:14px 16px;font-size:1.1rem;border-radius:10px}
+}
