@@ -6,6 +6,10 @@ Marketing website for \*\*Infinite Building Solutions\*\*, a construction, archi
 
 
 
+This is the pre-launch version, prepared for deployment at www.infinitebs.in.
+
+
+
 It is a static site (HTML, CSS and JavaScript only). There is no build step and no dependencies.
 
 
@@ -24,27 +28,23 @@ It is a static site (HTML, CSS and JavaScript only). There is no build step and 
 
 
 
-All four pages live in `index.html` and switch using the URL hash (`#home`, `#work`, `#about`, `#contact`).
-
-
+Each page is its own HTML file so search engines can index them separately: `index.html` (Home), `our-work.html` (Our Work, including Glimpses of Abroad at `#abroad`), `about.html` and `contact.html`.
 
 \## Project structure
 
-
-
 ```
-
-index.html        page markup
-
+index.html, our-work.html, about.html, contact.html   pages
+404.html          not found page
+sitemap.xml       list of pages for search engines
+robots.txt        crawler rules and sitemap location
 css/style.css     all styling and brand colours
-
-js/script.js      project data, page switching and contact form
-
+js/script.js      project data, mobile menu and contact form
 images/           logo and project photos
-
 ```
 
+\## SEO
 
+Every page has its own title, meta description, canonical URL, Open Graph and Twitter tags. Business details are added as JSON-LD structured data (GeneralContractor). The live domain is set to `https://www.infinitebs.in` in the canonical tags, `sitemap.xml` and `robots.txt`. If the domain changes, find and replace it in those files. After going live, submit `https://www.infinitebs.in/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 
 \## Run locally
 
@@ -104,21 +104,7 @@ The form currently opens the visitor's email app with the enquiry filled in (`ma
 
 \## Deployment
 
-
-
-Because the site is static, it can be hosted anywhere. For a free preview on GitHub Pages:
-
-
-
-1\. Go to \*\*Settings → Pages\*\* in this repository.
-
-2\. Under \*\*Build and deployment\*\*, choose \*\*Deploy from a branch\*\*.
-
-3\. Select the `main` branch and the `/ (root)` folder, then save.
-
-
-
-The site will be live at `https://<username>.github.io/<repository-name>/`.
+Because the site is static, it can be hosted anywhere. Upload all files to the root of the web host for `www.infinitebs.in`, keeping the folder structure as it is. `sitemap.xml` and `robots.txt` must sit at the top level so they open at `https://www.infinitebs.in/sitemap.xml` and `https://www.infinitebs.in/robots.txt`.
 
 
 
