@@ -23,9 +23,9 @@ return '<article class="card'+(big?' a':'')+'">'+m+'<div class="b">'+(p.c=="Ongo
 document.getElementById("peek").innerHTML=card(P[0],1)+card(P[1])+card(P[2]);
 function fill(id,c){document.getElementById(id).innerHTML=P.filter(function(p){return p.i&&p.c==c}).map(function(p){return card(p)}).join("")}
 fill("done","Completed");fill("going","Ongoing");
-function route(){var h=(location.hash||"#home").slice(1);var el=document.getElementById(h);if(!el||!el.classList.contains("pg"))h="home";
+function route(){var h=(location.hash||"#home").slice(1),t=h;if(h=="abroad")h="work";var el=document.getElementById(h);if(!el||!el.classList.contains("pg"))h="home";
 [].forEach.call(document.querySelectorAll(".pg"),function(s){s.classList.toggle("on",s.id==h)});
-[].forEach.call(document.querySelectorAll("nav a"),function(a){a.classList.toggle("on",a.dataset.l==h)});window.scrollTo(0,0)}
+[].forEach.call(document.querySelectorAll("nav a"),function(a){a.classList.toggle("on",a.dataset.l==h)});window.scrollTo(0,0);if(t=="abroad")document.getElementById("abroad").scrollIntoView()}
 addEventListener("hashchange",route);route();
 document.getElementById("f").onsubmit=function(e){e.preventDefault();var f=e.target;
 location.href="mailto:ceo@infinitebs.in?subject="+encodeURIComponent("Website enquiry: "+f.t.value)+"&body="+encodeURIComponent("Name: "+f.n.value+"\nPhone: "+f.p.value+"\n\n"+f.m.value);

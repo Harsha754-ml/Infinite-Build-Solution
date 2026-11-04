@@ -177,3 +177,9 @@ header nav a{padding:14px 16px;font-size:1.1rem;border-radius:10px}
 .band .w{padding-left:28px;padding-right:28px}
 footer .w{padding-left:28px;padding-right:28px;gap:32px}
 }
+/* ---- v9: About cards, abroad gallery inside Our Work ---- */
+.cards{gap:28px}
+.pc{background:linear-gradient(180deg,var(--dk),var(--br));color:#f3f6f5;border-radius:48px;padding:52px 48px}
+.pc .mut{color:#b8c8c9}
+#abroad{scroll-margin-top:100px}
+@media(max-width:860px){.pc{border-radius:36px;padding:38px 28px}.cards{gap:20px}}
