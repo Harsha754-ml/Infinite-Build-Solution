@@ -144,6 +144,7 @@ h1,h2,h3{letter-spacing:0}h2{font-weight:800}
 .gal{columns:3 260px;column-gap:16px;margin-top:36px}.gal img{width:100%;display:block;margin:0 0 16px;border-radius:6px 6px 6px 36px;break-inside:avoid}
 @media(max-width:860px){.peek .card,.peek .a{min-height:320px}.peek .a h3{font-size:1.45rem}.bn.mid{min-height:0}.bn.mid .w{padding-top:64px;padding-bottom:40px}.g2{margin-top:56px}}
 @media(max-width:600px){.gal{columns:2 140px;column-gap:10px}.gal img{margin-bottom:10px;border-radius:4px 4px 4px 22px}.grid{grid-template-columns:1fr}}
+
 /* ---- v7: mobile hamburger menu ---- */
 .mb{display:none}
 @media(max-width:860px){
@@ -155,4 +156,24 @@ h1,h2,h3{letter-spacing:0}h2{font-weight:800}
 header nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;background:#fff;padding:12px 24px 20px;border-bottom:3px solid var(--or);box-shadow:0 18px 30px #0002}
 header nav.open{display:flex}
 header nav a{padding:14px 16px;font-size:1.1rem;border-radius:10px}
+}
+
+/* ---- v8: side gutters + breathing room on mobile ---- */
+.w.sec{padding-left:24px;padding-right:24px}
+@media(max-width:860px){
+.w{padding-left:28px;padding-right:28px}
+.nav{padding-left:20px;padding-right:20px}
+.bn,.bn.mid{margin-left:18px;margin-right:18px;border-width:5px}
+.bn.mid{margin-bottom:18px}
+.bn .w{padding-left:26px;padding-right:26px}
+.bn.tall{margin-top:18px}
+.stats{margin-left:0;margin-right:0;padding:22px 8px}
+.stats div{padding:0 18px}
+.sec{padding-top:64px;padding-bottom:64px}
+.hd{gap:26px}
+.dark .lead{margin-top:20px!important}
+.w.sec{padding-left:28px;padding-right:28px}
+.card .b{padding:90px 24px 26px}
+.band .w{padding-left:28px;padding-right:28px}
+footer .w{padding-left:28px;padding-right:28px;gap:32px}
 }
