@@ -1,22 +1,36 @@
 /* ==========================================================================
-   Infinite Building Solutions — World-Class Architectural Studio Edition
-   Modern Minimalist Luxury Dark:
-   Deep Cinematic Obsidian, Smoked Quartz Glass, Architectural Titanium & Warm Bronze Accent
+   Infinite Building Solutions — Architectural Studio Design
+   Color Theme: Dark theme C-petrol with Signature Logo Orange (#f26e36)
+   Palette: Rich Dark Espresso to Warm Black, Smoked Coffee Glass, Crisp Ivory & Warm Bronze-Orange
    ========================================================================== */
+
 :root {
-  --bg: #09090b;               /* Deepest Obsidian Studio Canvas */
-  --bg-card: rgba(255, 255, 255, 0.03); /* Smoked Quartz Glass */
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.08); /* Precision Studio Hairline */
-  --border-hover: rgba(242, 110, 54, 0.5); /* Luxury Warm Bronze Glow */
-  --or: #f26e36;               /* Architectural Warm Bronze / Signature Orange */
-  --or-glow: rgba(242, 110, 54, 0.25);
-  --gold: #e5a968;             /* Subtle Champagne Gold */
-  --fg: #ffffff;               /* Pure Crisp White */
-  --fg-sec: #94969c;           /* Sophisticated Architectural Gray */
-  --fg-mut: #666970;           /* Subtle Muted Tertiary */
-  --st: #141416;
-  --ln: rgba(255, 255, 255, 0.07);
+  /* SSR Realty Inspired Espresso & Dark Coffee Palette */
+  --bg: #0a1514;                        /* Deepest Warm Espresso Noir */
+  --bg-gradient: linear-gradient(180deg, #102321 0%, #0b1716 40%, #070f0e 100%);
+  --bg-alt: #0e1d1b;                    /* Dark Roasted Coffee Slate */
+  --bg-card: rgba(17, 35, 33, 0.72);    /* Smoked Espresso Glass */
+  --bg-card-hover: rgba(22, 46, 44, 0.9);
+  --st: #0f1e1d;                        /* Section Dark Foundation */
+
+  /* Architectural Hairlines & Borders */
+  --border: rgba(255, 255, 255, 0.08); /* Clean Precision Hairline */
+  --border-warm: rgba(242, 110, 54, 0.22); /* Warm Copper Hairline */
+  --border-hover: rgba(242, 110, 54, 0.65); /* Vibrant Orange Glow Border */
+  --ln: rgba(255, 255, 255, 0.08);
+
+  /* Signature Brand Logo Orange & Warm Accents */
+  --or: #f26e36;                        /* Signature Infinite Logo Orange */
+  --or-bright: #ff8246;                 /* Glowing Orange Highlight */
+  --or-deep: #d8551e;                  /* Deep Warm Terracotta */
+  --or-glow: rgba(242, 110, 54, 0.3);   /* Luminous Ambient Orange Glow */
+  --gold: #e5a968;                      /* Champagne Accent */
+
+  /* Crisp Typography Colors */
+  --fg: #ffffff;                        /* Crisp Off-White */
+  --fg-sec: #b0a89f;                    /* Warm Architectural Taupe / Muted Ivory */
+  --fg-mut: #978d83;                    /* Muted Architectural Gray */
+
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -33,10 +47,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
   background-image: 
-    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(242, 110, 54, 0.07), transparent 60%),
-    radial-gradient(circle at 90% 40%, rgba(255, 255, 255, 0.02), transparent 40%);
+    radial-gradient(ellipse 75% 45% at 50% 0%, rgba(242, 110, 54, 0.16), transparent 65%),
+    radial-gradient(circle at 90% 30%, rgba(218, 95, 39, 0.08), transparent 50%),
+    radial-gradient(circle at 10% 70%, rgba(30, 63, 60, 0.15), transparent 60%);
   color: var(--fg);
   font: 400 16px/1.7 "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: clip;
@@ -52,6 +67,9 @@ body::before {
   z-index: 10;
 }
 
+/* --------------------------------------------------------------------------
+   Original Architectural Typography Structure
+   -------------------------------------------------------------------------- */
 h1, h2, h3 {
   font-family: "Archivo", "Public Sans", system-ui, sans-serif;
   line-height: 1.12;
@@ -69,16 +87,16 @@ a { color: inherit; text-decoration: none; }
 .w { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 
 /* --------------------------------------------------------------------------
-   Header & Navigation — Floating Studio Minimalist Bar
+   Header & Navigation — Clean Floating Studio Bar
    -------------------------------------------------------------------------- */
 header {
   position: sticky;
   top: env(safe-area-inset-top, 0px);
   z-index: 30;
-  background: rgba(9, 9, 11, 0.78);
+  background: rgba(11, 23, 22, 0.85);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-warm);
   transition: all 0.3s ease;
 }
 
@@ -114,31 +132,31 @@ nav a {
   border-radius: 99px;
   font-weight: 500;
   font-size: 0.92rem;
-  color: #a1a1aa;
+  color: #b0a89f;
   transition: all 0.2s ease;
 }
 
 nav a:hover {
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 nav a.on {
   background: var(--or);
-  color: #09090b;
+  color: #0a1514;
   font-weight: 700;
   box-shadow: 0 0 20px var(--or-glow);
 }
 
 /* --------------------------------------------------------------------------
-   Buttons — Sleek Precision
+   Buttons — Crisp Precision with Signature Logo Orange
    -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: var(--or);
-  color: #09090b;
+  color: #0a1514;
   font-weight: 700;
   padding: 15px 32px;
   border-radius: 99px;
@@ -156,9 +174,9 @@ nav a.on {
 }
 
 .btn.ghost {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: none;
 }
 
@@ -175,7 +193,7 @@ nav a.on {
 
 .btn.lt:hover {
   background: #ffffff;
-  color: #09090b;
+  color: #0a1514;
 }
 
 .pg { display: none; }
@@ -183,34 +201,29 @@ nav a.on {
 .cta { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* --------------------------------------------------------------------------
-   Hero Banners — Cinematic Full Bleed with Clean Architectural Geometry
+   Hero Banners — Cinematic Architectural Full Bleed (Espresso/Noir Tone)
    -------------------------------------------------------------------------- */
 .bn {
   position: relative;
-  margin: 16px 20px;
+  margin: 16px auto;
+  width: calc(100% - 40px);
+  max-width: 1200px;
   border-radius: 20px;
-  border: 1px solid var(--border);
+  border: 2px solid var(--or);
   min-height: 50vh;
   display: flex;
   align-items: flex-end;
   color: #ffffff;
-  background: #09090b center/cover no-repeat;
+  background: #0c1a18 center/cover no-repeat;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
 }
 
 .bn::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(9, 9, 11, 0.3) 0%, rgba(9, 9, 11, 0.75) 50%, rgba(9, 9, 11, 0.98) 100%);
-}
-
-.bn::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(242, 110, 54, 0.15), transparent 50%);
+  background: linear-gradient(180deg, rgba(11, 23, 22, 0.25) 0%, rgba(11, 23, 22, 0.75) 50%, rgba(8, 18, 17, 0.98) 100%);
 }
 
 .bn .w {
@@ -221,9 +234,12 @@ nav a.on {
   z-index: 1;
 }
 
-.bn.tall { min-height: 85vh; }
+.bn.tall { min-height: calc(100svh - 112px); }
+.bn.tall .w { padding-top: 90px; padding-bottom: 112px; }
+.bn.tall h1 { font-size: clamp(2.2rem, 4.6vw, 4.2rem); max-width: 22ch; }
+.bn.tall p { margin: 20px 0 28px; }
 .bn h1 { max-width: 17ch; text-transform: uppercase; line-height: 1.05; letter-spacing: -0.02em; }
-.bn p { color: #d4d4d8; font-size: 1.25rem; margin: 24px 0 34px; max-width: 56ch; line-height: 1.6; }
+.bn p { color: #d8d0c7; font-size: 1.25rem; margin: 24px 0 34px; max-width: 56ch; line-height: 1.6; }
 
 .bn.i1 { background-image: url(../images/hero-home.jpg); }
 .bn.i2 { background-image: url(../images/hero-work.jpg); }
@@ -232,20 +248,20 @@ nav a.on {
 .bn.i5 { background-image: url(../images/oman.jpg); }
 
 /* --------------------------------------------------------------------------
-   Stats Bar — Ultra-Clean Glassmorphic Metric Ribbon
+   Stats Bar — Smoked Espresso Metric Ribbon
    -------------------------------------------------------------------------- */
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background: rgba(18, 18, 22, 0.8);
+  background: rgba(15, 31, 30, 0.85);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-warm);
   border-radius: 18px;
   margin-top: -54px;
   position: relative;
   z-index: 2;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(242, 110, 54, 0.1);
   padding: 34px 20px;
 }
 
@@ -295,8 +311,8 @@ nav a.on {
 }
 
 .dark {
-  background: #0d0d10;
-  border-block: 1px solid var(--border);
+  background: var(--bg-alt);
+  border-block: 1px solid var(--border-warm);
 }
 
 .dark .lead {
@@ -309,7 +325,7 @@ nav a.on {
 .mut { color: var(--fg-mut); }
 
 /* --------------------------------------------------------------------------
-   Swachh Pukhar Style Service Cards — Pure Architectural Glassmorphism
+   Swachh Pukhar Style Service Cards — Smoked Espresso Glass & Orange Accents
    -------------------------------------------------------------------------- */
 .sp-grid {
   display: grid;
@@ -319,24 +335,24 @@ nav a.on {
 }
 
 .sp-card {
-  background: rgba(22, 22, 26, 0.6);
+  background: var(--bg-card);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-warm);
   border-radius: 18px;
   padding: 40px 36px;
   display: flex;
   flex-direction: column;
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
   position: relative;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
 }
 
 .sp-card:hover {
   transform: translateY(-6px);
   border-color: var(--border-hover);
-  background: rgba(28, 28, 34, 0.85);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), 0 0 30px var(--or-glow);
+  background: var(--bg-card-hover);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75), 0 0 30px var(--or-glow);
 }
 
 .sp-top {
@@ -350,13 +366,13 @@ nav a.on {
   width: 50px;
   height: 50px;
   border-radius: 12px;
-  background: rgba(242, 110, 54, 0.1);
+  background: rgba(242, 110, 54, 0.12);
   color: var(--or);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(242, 110, 54, 0.25);
-  box-shadow: 0 0 20px rgba(242, 110, 54, 0.1);
+  border: 1px solid rgba(242, 110, 54, 0.28);
+  box-shadow: 0 0 20px rgba(242, 110, 54, 0.12);
 }
 
 .sp-icon svg {
@@ -397,13 +413,18 @@ nav a.on {
 .sp-pill {
   font-size: 0.8rem;
   font-weight: 500;
-  color: #a1a1aa;
+  color: #b5aca2;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
   padding: 5px 14px;
   border-radius: 99px;
   white-space: nowrap;
   letter-spacing: 0.02em;
+}
+
+.sp-card:hover .sp-pill {
+  border-color: rgba(242, 110, 54, 0.25);
+  color: #ffffff;
 }
 
 .sp-link {
@@ -445,7 +466,7 @@ nav a.on {
 .filters button {
   font: 600 0.92rem "Public Sans", sans-serif;
   background: rgba(255, 255, 255, 0.03);
-  color: #a1a1aa;
+  color: #b0a89f;
   border: 1px solid var(--border);
   padding: 10px 22px;
   border-radius: 99px;
@@ -454,16 +475,16 @@ nav a.on {
 }
 
 .filters button:hover {
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(242, 110, 54, 0.4);
   color: #ffffff;
 }
 
 .filters button[aria-pressed=true] {
-  background: #ffffff;
-  color: #09090b;
-  border-color: #ffffff;
+  background: var(--or);
+  color: #0a1514;
+  border-color: var(--or);
   font-weight: 700;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px var(--or-glow);
 }
 
 .grid {
@@ -472,23 +493,28 @@ nav a.on {
   gap: 28px;
 }
 
+/* UNIFORM ANIMATION SPEED & SHAPE TRANSFORMATION (Matched 1.1s) */
 .card {
   position: relative;
   min-height: 380px;
   color: #fff;
-  background: #141418;
-  border: 1px solid var(--border);
+  background: #0f1f1e;
+  border: 1px solid var(--border-warm);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   isolation: isolate;
-  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              border-radius 1.1s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
+  border-radius: 24px;
   border-color: var(--border-hover);
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.8), 0 0 30px var(--or-glow);
 }
@@ -500,16 +526,16 @@ nav a.on {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.card:hover img { transform: scale(1.07); }
+.card:hover img { transform: scale(1.08); }
 
 .tile {
   font-size: 2.6rem;
   align-items: flex-start;
   padding: 28px;
-  background-color: #1a1a20;
+  background-color: #112422;
   background-image: linear-gradient(135deg, transparent 65%, var(--or) 65%);
   display: flex;
 }
@@ -519,18 +545,18 @@ nav a.on {
   margin-top: auto;
   width: 100%;
   padding: 100px 28px 28px;
-  background: linear-gradient(transparent 0%, rgba(9, 9, 11, 0.96) 65%);
+  background: linear-gradient(transparent 0%, rgba(10, 21, 20, 0.96) 65%);
 }
 
 .card h3 { color: #ffffff; font-size: 1.45rem; margin-bottom: 8px; font-weight: 700; }
-.card small { color: #a1a1aa; display: block; font-size: 0.92rem; line-height: 1.55; }
+.card small { color: #b0a89f; display: block; font-size: 0.92rem; line-height: 1.55; }
 
 .tag {
   display: inline-block;
   font-size: 0.78rem;
   font-weight: 700;
   background: var(--or);
-  color: #09090b;
+  color: #0a1514;
   padding: 3px 12px;
   border-radius: 99px;
   margin-bottom: 12px;
@@ -548,7 +574,7 @@ nav a.on {
 .peek .a { grid-row: span 2; min-height: 640px; }
 
 /* --------------------------------------------------------------------------
-   Abroad Gallery
+   Abroad Gallery — Uniform Shape Changing & Zoom Speed
    -------------------------------------------------------------------------- */
 .gal {
   columns: 3 280px;
@@ -560,17 +586,21 @@ nav a.on {
   width: 100%;
   display: block;
   margin: 0 0 20px;
-  border-radius: 14px;
+  border-radius: 16px;
   break-inside: avoid;
-  border: 1px solid var(--border);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid var(--border-warm);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+  transition: transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              border-radius 1.1s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
 }
 
 .gal img:hover {
-  transform: scale(1.03);
+  transform: scale(1.04) translateY(-4px);
+  border-radius: 24px;
   border-color: var(--border-hover);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 25px var(--or-glow);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 25px var(--or-glow);
 }
 
 /* --------------------------------------------------------------------------
@@ -580,23 +610,25 @@ nav a.on {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 28px;
-  margin-top: 36px;
+  margin-top: 40px;
 }
 
 .gal-item {
-  background: rgba(22, 22, 26, 0.6);
-  backdrop-filter: blur(14px);
-  border: 1px solid var(--border);
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-warm);
   border-radius: 16px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
-  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              border-radius 1.1s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
 }
 
 .gal-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  border-radius: 24px;
   border-color: var(--border-hover);
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75), 0 0 30px var(--or-glow);
 }
@@ -606,7 +638,7 @@ nav a.on {
   aspect-ratio: 16/11;
   object-fit: cover;
   display: block;
-  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .gal-item:hover img { transform: scale(1.07); }
@@ -636,9 +668,9 @@ nav a.on {
 }
 
 .blog-card {
-  background: rgba(22, 22, 26, 0.6);
+  background: var(--bg-card);
   backdrop-filter: blur(14px);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-warm);
   border-radius: 18px;
   padding: 38px 34px;
   display: flex;
@@ -693,9 +725,9 @@ nav a.on {
 .facts b { display: block; font: 800 2.4rem "Archivo", sans-serif; color: #ffffff; }
 
 .pc {
-  background: rgba(22, 22, 26, 0.65);
+  background: var(--bg-card);
   backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-warm);
   border-radius: 24px;
   padding: 50px 44px;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
@@ -705,17 +737,17 @@ nav a.on {
 
 /* Founder & CEO Card */
 .founder-card {
-  background: rgba(22, 22, 26, 0.7);
+  background: linear-gradient(145deg, rgba(19, 39, 37, 0.75) 0%, rgba(13, 28, 26, 0.9) 100%);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-warm);
   border-radius: 24px;
   padding: 52px 48px;
   display: grid;
   grid-template-columns: 310px 1fr;
   gap: 52px;
   align-items: center;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(242, 110, 54, 0.12);
 }
 
 .founder-media { display: flex; flex-direction: column; align-items: center; gap: 20px; }
@@ -725,10 +757,10 @@ nav a.on {
   max-width: 290px;
   aspect-ratio: 1/1.2;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(242, 110, 54, 0.25);
   overflow: hidden;
   position: relative;
-  background: #141418;
+  background: #102321;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
@@ -741,14 +773,14 @@ nav a.on {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #18181e 0%, #0d0d10 100%);
+  background: linear-gradient(180deg, #122625 0%, #0c1a18 100%);
   color: var(--fg-sec);
   padding: 24px;
   text-align: center;
 }
 
 .founder-placeholder svg { width: 72px; height: 72px; fill: var(--or); margin-bottom: 14px; opacity: 0.9; }
-.founder-placeholder span { font-size: 0.92rem; color: #a1a1aa; line-height: 1.5; }
+.founder-placeholder span { font-size: 0.92rem; color: #b0a89f; line-height: 1.5; }
 .founder-placeholder b { color: #fff; display: block; font-size: 1.05rem; margin-bottom: 4px; }
 
 .founder-name-tag { text-align: center; }
@@ -766,22 +798,29 @@ nav a.on {
   padding-left: 20px;
   margin: 16px 0 0;
   font-style: italic;
-  color: #e4e4e7;
+  color: #e4ddd5;
   font-size: 1.05rem;
 }
+
+/* About the firm card (matches founder card) */
+.about-stats { width: 100%; border: 1px solid rgba(242, 110, 54, 0.25); border-radius: 18px; background: rgba(255, 255, 255, 0.02); overflow: hidden; }
+.about-stats div { padding: 22px 26px; border-bottom: 1px solid var(--border); font-size: 0.92rem; color: var(--fg-sec); }
+.about-stats div:last-child { border-bottom: 0; }
+.about-stats b { display: block; font: 800 2.2rem "Archivo", sans-serif; color: #ffffff; letter-spacing: -0.03em; }
+.about-card .founder-eyebrow { margin-bottom: 10px; }
 
 /* --------------------------------------------------------------------------
    Contact Form & Details
    -------------------------------------------------------------------------- */
 form { display: grid; gap: 20px; }
-label { font-weight: 600; font-size: 0.95rem; display: grid; gap: 8px; color: #d4d4d8; }
+label { font-weight: 600; font-size: 0.95rem; display: grid; gap: 8px; color: #d8d0c7; }
 
 input, select, textarea {
   font: inherit;
   padding: 15px 18px;
   border-radius: 12px;
-  border: 1px solid var(--border);
-  background: rgba(22, 22, 26, 0.8);
+  border: 1px solid var(--border-warm);
+  background: rgba(16, 33, 32, 0.85);
   color: #fff;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -796,19 +835,19 @@ input:focus, select:focus, textarea:focus {
 .info b { display: block; color: var(--or); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px; }
 
 /* --------------------------------------------------------------------------
-   Footer — Studio Obsidian Footer
+   Original Clean 3-Column Footer with SSR Espresso Palette
    -------------------------------------------------------------------------- */
 footer {
-  background: #060608;
-  color: #71717a;
+  background: #070f0e;
+  color: #8c837b;
   padding: 64px 0 44px;
   font-size: 0.95rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-warm);
 }
 
 footer .w { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
 footer img { height: 50px; background: #fff; border-radius: 8px; padding: 4px 10px; }
-footer a { display: block; text-decoration: none; padding: 4px 0; color: #a1a1aa; transition: color 0.2s; }
+footer a { display: block; text-decoration: none; padding: 4px 0; color: #b0a89f; transition: color 0.2s; }
 footer a:hover { color: #ffffff; }
 
 /* --------------------------------------------------------------------------
@@ -843,10 +882,10 @@ footer a:hover { color: #ffffff; }
     flex-direction: column;
     align-items: stretch;
     gap: 6px;
-    background: rgba(9, 9, 11, 0.98);
+    background: rgba(11, 23, 22, 0.98);
     backdrop-filter: blur(24px);
     padding: 20px 24px 28px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-warm);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
   }
   header nav.open { display: flex; }
@@ -856,7 +895,7 @@ footer a:hover { color: #ffffff; }
   .stats { grid-template-columns: 1fr; gap: 20px 0; margin-top: -20px; padding: 26px 18px; }
   .stats div { border-left: 0; border-bottom: 1px solid var(--border); padding: 0 10px 18px; }
   .stats div:last-child { border-bottom: 0; padding-bottom: 0; }
-  .bn { border-radius: 16px; margin: 12px; min-height: 65vh; }
+  .bn { border-radius: 16px; margin: 12px auto; width: calc(100% - 24px); min-height: 65vh; }
   .gal { columns: 2 140px; column-gap: 12px; }
   .founder-card { grid-template-columns: 1fr; gap: 32px; padding: 36px 24px; text-align: center; }
   .founder-quote { border-left: 0; border-top: 2px solid var(--or); padding: 16px 0 0; }
